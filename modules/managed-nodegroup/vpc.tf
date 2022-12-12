@@ -29,7 +29,8 @@
 #}
 
 module "vpc_cni_irsa" {
-  source = "git@github.com:/infracloudio/terraform-aws-iam//examples/iam-role-for-service-accounts-eks"
+  source = "git::https://github.com/Inesh-Reddy/terraform-aws-iam.git//modules/iam-role-for-service-accounts-eks"
+  /* source = "git@github.com:/infracloudio/terraform-aws-iam//examples/iam-role-for-service-accounts-eks" */
 
   role_name_prefix      = "VPC-CNI-IRSA"
   attach_vpc_cni_policy = true

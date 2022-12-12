@@ -1,0 +1,15 @@
+cluster_name                    = "kyverno-eks-rs"
+eks_version                     = "1.23"
+region                          = "us-east-2"
+instance_types                  = ["t3.medium"]
+number_of_azs                   = 3
+desired_size                    = 1
+cluster_endpoint_public_access  = true
+cluster_endpoint_private_access = true
+eks_read_write_role_creation    = false #creates read-write access role to cluster
+eks_read_only_role_creation     = false #creates read-only access role to cluster
+#vpc_cidr                        = "10.0.0.0/16"
+vpc_id                          = "vpc-062abad15157909b6"
+private_subnets                 = ["subnet-05b716b3fccced726", "subnet-0d97128f4de688c6f", "subnet-0a9e7a7fe8f29632d"]
+#create_vpc = true
+#iam_account_id                 = "XXXXXXXXXX" #iam account id where user group is located. It is required if either eks_read_write_role_creation or eks_read_only_role_creation is true.

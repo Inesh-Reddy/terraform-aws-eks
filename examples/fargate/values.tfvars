@@ -1,0 +1,9 @@
+cluster_name                    = "inception-eks-fargate-latest"
+region                          = "ap-south-1"
+number_of_azs                   = 3
+eks_version                     = "1.22"
+instance_types                  = ["t3.small"]
+desired_size                    = 1
+cluster_endpoint_public_access  = true
+cluster_endpoint_private_access = true
+vpc_cidr                        = "10.0.0.0/16"

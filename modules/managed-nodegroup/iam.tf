@@ -1,5 +1,5 @@
 module "iam-all-ec2-describe-policy" {
-  source = "https://github.com/Inesh-Reddy/terraform-aws-iam.git//examples/iam-all-ec2-describe-policy"
+  source = "git@github.com:Inesh-Reddy/terraform-aws-iam//examples/iam-all-ec2-describe-policy"
   /* source = "git@github.com:/infracloudio/terraform-aws-iam//examples/iam-all-ec2-describe-policy" */
 }
 
@@ -21,7 +21,7 @@ locals {
 }
 
 module "iam_iam-eks-describe-cluster" {
-  source = "https://github.com/Inesh-Reddy/terraform-aws-iam.git//examples/iam-eks-describe-cluster-policy"
+  source = "git@github.com:Inesh-Reddy/terraform-aws-iam//examples/iam-eks-describe-cluster-policy"
   /* source = "git@github.com:/infracloudio/terraform-aws-iam//examples/iam-eks-describe-cluster-policy" */
 }
 
@@ -34,7 +34,7 @@ resource "aws_iam_policy" "eks_describe_cluster" {
 
 module "iam_iam-assumable-role" {
   count  = var.eks_read_write_role_creation ? 1 : 0
-  source = "https://github.com/Inesh-Reddy/terraform-aws-iam.git//examples/iam-assumable-role"
+  source = "git@github.com:Inesh-Reddy/terraform-aws-iam//examples/iam-assumable-role"
   /* source = "git@github.com:/infracloudio/terraform-aws-iam//examples/iam-assumable-role" */
 
   trusted_role_arns = [
@@ -52,7 +52,7 @@ module "iam_iam-assumable-role" {
 
 module "iam_iam-assumable-role_" {
   count  = var.eks_read_only_role_creation ? 1 : 0
-  source = "https://github.com/Inesh-Reddy/terraform-aws-iam.git//examples/iam-assumable-role"
+  source = "git@github.com:Inesh-Reddy/terraform-aws-iam//examples/iam-assumable-role"
   /* source = "git@github.com:/infracloudio/terraform-aws-iam//examples/iam-assumable-role" */
 
   trusted_role_arns = [
